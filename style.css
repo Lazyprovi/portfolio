@@ -129,17 +129,31 @@ h1, h2 {
 }
 
 .skill-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 15px; 
-    border-radius: 12px;
-    backdrop-filter: blur(5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    font-weight: bold;
-    font-size: 16px; 
-    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 145px;
+    height: 140px;
+    margin: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+    color: #fff;
+    font-size: 1.1em;
     text-align: center;
-    transition: transform 0.3s, background 0.3s;
-    width: 120px;
+    overflow: hidden; 
+    word-break: break-word; 
+    position: relative;
+}
+
+.skill-logo {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+    object-fit: contain;
 }
 
 .skill-card img.skill-logo {
@@ -153,6 +167,68 @@ h1, h2 {
 .skill-card:hover {
     transform: scale(1.05);
     background: rgba(255, 255, 255, 0.2);
+}
+
+.skill-desc {
+    margin-top: 10px;
+    background: rgba(255,255,255,0.25);
+    color: #222;
+    border-radius: 8px;
+    padding: 8px;
+    font-size: 0.95em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    backdrop-filter: blur(4px);
+    transition: opacity 0.4s, transform 0.4s;
+    opacity: 0;
+    transform: translateY(20px);
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    width: 220px;
+    pointer-events: none;
+    z-index: 2;
+    text-align: center;
+    display: block;
+    visibility: hidden;
+}
+
+.skill-card {
+    position: relative;
+}
+
+.skill-card.active .skill-desc {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    visibility: visible;
+}
+
+#skill-desc-container {
+    margin: 30px auto 0 auto;
+    background: rgba(255,255,255,0.25);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 18px 24px;
+    font-size: 1.05em;
+    font-weight: 400;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+    backdrop-filter: blur(8px);
+    max-width: 350px;
+    min-height: 40px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s, transform 0.4s;
+    pointer-events: none;
+    position: relative;
+    visibility: hidden;
+    z-index: 2;
+}
+#skill-desc-container.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    visibility: visible;
 }
 
 
@@ -227,18 +303,36 @@ footer {
 .bottom-links a {
     padding: 10px 20px;
     border-radius: 8px;
-    color: white;
+    
     font-weight: bold;
     text-decoration: none;
     transition: background 0.3s, transform 0.3s;
 }
 
+
+.github-link {   
+  color: white;  
+}
+.github-link {
+    color: white !important;
+    background: transparent !important;
+}
+
+.github-link:hover,
+.github-link:active,
+.github-link:focus {
+    color: white !important;
+    background: transparent !important;
+    opacity: 1 !important;
+}
 .fb-link {
-    background: #1877f2;
+    background: #1876f200;
+    color: #1877f2;
 }
 
 .email-link {
-    background: #ff4500;
+    
+    color: #ff4500;
 }
 
 .bottom-links a:hover {
