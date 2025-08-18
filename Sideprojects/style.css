@@ -1,0 +1,115 @@
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f8fb;
+  color: #333;
+  line-height: 1.6;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0077b6;
+  color: white;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+.profile-img img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-right: 20px;
+}
+.profile-info {
+  max-width: 500px;
+}
+.profile-info h1 {
+  margin: 0;
+  font-size: 28px;
+}
+.course {
+  font-size: 16px;
+  font-weight: bold;
+  color: #caf0f8;
+}
+.intro {
+  margin: 10px 0;
+}
+.goal {
+  font-size: 14px;
+  color: #e0f7fa;
+}
+
+.skills-section {
+  text-align: center;
+  padding: 40px 20px;
+}
+.skills-section h2 {
+  margin-bottom: 20px;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+.skill-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+.skill-card i {
+  font-size: 30px;
+  color: #0077b6;
+}
+.skill-card p {
+  margin-top: 8px;
+  font-weight: bold;
+}
+.skill-card:hover {
+  transform: translateY(-5px);
+}
+
+.quote {
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+  background: #90e0ef;
+  color: #023e8a;
+  margin: 20px 0;
+}
+
+.about-section {
+  background: white;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.about-section h2 {
+  margin-bottom: 10px;
+  color: #0077b6;
+}
+
+.socials {
+  text-align: center;
+  padding: 20px;
+  background: #0077b6;
+}
+.socials a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+.socials a:hover {
+  color: #90e0ef;
+}
