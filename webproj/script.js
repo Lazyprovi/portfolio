@@ -61,3 +61,4 @@ document.addEventListener('click', function (e) {
         descContainer.classList.remove('active');
     }
 });
+
