@@ -86,10 +86,10 @@ h1, h2 {
 
 .student-photo {
     display: block;
-    max-width: 120px; 
+    max-width: 140px; 
     height: auto;
     margin: 10px auto;
-    border-radius: 8px;
+    border-radius: 200px;
 }
 
 
